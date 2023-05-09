@@ -5,7 +5,7 @@ const { v1: uuidv1 } = require('uuid');
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
-class Store{
+class myData{
     constructor(){
         this.dbFilePath = 'db/db.json';
     }
@@ -45,4 +45,4 @@ class Store{
 
 }
 
-module.exports= Store;
+module.exports= myData;

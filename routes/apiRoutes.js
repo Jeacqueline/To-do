@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const Store = require('../db/store');
-const store = new Store();
+const myData = require('../db/myData');
+const data = new myData();
 //GET
 router.get('/notes',(req, res) =>{
-    store
+    data
     .getNotes()
     .then((notes)=>{
         return res.json(notes);
@@ -22,7 +22,7 @@ router.post('/notes', (req, res) =>{
         return res.status(400).json(err);
     }
     const note = {title, text};
-    const newNote = store.addNote(note);
+    const newNote = data.addNote(note);
     return res.json(newNote);
    } catch (err){
     return res.status(500).json(err);
@@ -33,7 +33,7 @@ router.post('/notes', (req, res) =>{
 router.delete('/notes/:id',(req, res)=>{
     try{
         const noteId = req.params.id;
-        const deletedNote = store.removeNote(noteId);
+        const deletedNote = data.removeNote(noteId);
         if(!deletedNote) {
             return res.status(404).json(err);
         } 
