@@ -2,6 +2,11 @@
 
 This project is my note To-Do app and uses technologies like express.js, mongoose. It allows you to create, read, and delete notes.
 
+The following resources were used as a guide to can realize this application:
+- TDM-VIRT-FSF-PT-10-2022-U-LOLC/11-Express/01-Activities/25,19,28
+- https://expressjs.com/en/guide/routing.html 
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
 ## User Story
 
 - AS A small business owner
